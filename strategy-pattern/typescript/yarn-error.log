@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\danie\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js start
+  C:\Program Files\nodejs\node.exe C:\Users\danie\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js test-session
 
 PATH: 
   C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files (x86)\Windows Live\Shared;C:\Users\danie\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git LFS;C:\Program Files\NVIDIA Corporation\NVIDIA NGX;C:\Users\danie\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\Microsoft VS Code\bin;C:\Users\danie\AppData\Roaming\npm;C:\Users\danie\.dotnet\tools;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps
@@ -19,14 +19,17 @@ npm manifest:
     "version": "1.0.0",
     "main": "dist/main.js",
     "scripts": {
-      "start": "tsc && node",
-      "test": "jest"
+      "start": "yarn build && node dist/main.js",
+      "build": "rimraf dist && tsc",
+      "test": "jest",
+      "test-session": "jest --watchAll"
     },
     "license": "MIT",
     "devDependencies": {
       "@types/jest": "^24.0.11",
       "@types/node": "^11.12.2",
       "jest": "^24.5.0",
+      "rimraf": "^2.6.3",
       "ts-jest": "^24.0.0",
       "typescript": "^3.4.1"
     }
@@ -2470,7 +2473,7 @@ Lockfile:
     version "0.1.15"
     resolved "https://registry.yarnpkg.com/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
   
-  rimraf@^2.5.4, rimraf@^2.6.2:
+  rimraf@^2.5.4, rimraf@^2.6.2, rimraf@^2.6.3:
     version "2.6.3"
     resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.3.tgz#b2d104fe0d8fb27cf9e0a1cda8262dd3833c6cab"
     dependencies:
@@ -2825,8 +2828,8 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
   
   ts-jest@^24.0.0:
-    version "24.0.0"
-    resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-24.0.0.tgz#3f26bf2ec1fa584863a5a9c29bd8717d549efbf6"
+    version "24.0.1"
+    resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-24.0.1.tgz#77258061cc354c3fa8616b8ac03baa0f8580f854"
     dependencies:
       bs-logger "0.x"
       buffer-from "1.x"
@@ -3068,9 +3071,9 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 2
+  Exit code: 1
   Command: C:\WINDOWS\system32\cmd.exe
-  Arguments: /d /s /c tsc && node
+  Arguments: /d /s /c jest --watchAll
   Directory: F:\Development\codeweavers\design-patterns\strategy-pattern\typescript
   Output:
   

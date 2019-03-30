@@ -5,7 +5,8 @@
   "scripts": {
     "start": "yarn build && node dist/main.js",
     "build": "rimraf dist && tsc",
-    "test": "jest"
+    "test": "jest",
+    "test-session": "jest --watchAll"
   },
   "license": "MIT",
   "devDependencies": {
