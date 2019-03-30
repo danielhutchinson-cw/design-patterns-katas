@@ -10,7 +10,7 @@ A games company you work for is developing a new RPG game, to be built in iterat
 
 During the design standup this morning the game designer has stated that a characters class is dependent upon what weapon the character is holding. When equipping new weapons the characters class can change dynamically at run-time.
 
-Unfortunately; your publisher, Artistic Electronics, is a draconic overlord that demands each iteration be a full working release so that they can sell each update at full price. As such your system design should allow for changes to be made without having to change code that is already in place. Once an iteration has been completed, you are no longer allowed to go back and modify existing code.
+Unfortunately; your publisher, Artistic Electronics, is a draconic overlord that demands each iteration be a full working release so that they can sell each update at full price. As such your system design should allow for changes to be made without having to change code that is already in place.
 
 # Iterations
 
