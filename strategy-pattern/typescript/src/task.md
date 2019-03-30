@@ -1,8 +1,11 @@
-# The Strategy Pattern
+# The point of this Kata
+You should be able to write code that is extensible, as requirements change, additional actions should be quick and easy to implement. With as few changes to the codebase as possible. This reduces the risk of introducing defects, and reduces the overall cost of new features.
 
-The strategy pattern is a behavioral design pattern that allows you to decide which course of action a program should take, based on a specific context during runtime. You encapsulate two different algorithms inside two classes, and decide at runtime which strategy you want to go with.
+# Arbitrary rules
+- You are not allowed to write an `if statement` anywhere in your code
 
-The aim of this pattern is to separate parts of a system that may change from those which are not likely to change. This allows for easier maintainability of the system in the future.
+# Recommended Pattern
+- Strategy Pattern
 
 # Project Brief
 
@@ -18,6 +21,8 @@ Unfortunately; your publisher, Artistic Electronics, is a draconic overlord that
 
 2. The game must now support multiple character classes. For this to be an acceptable release you should be able to create a new character and give it a weapon type. The weapon type the character has should change which output is show when fight is called. The release should support three different weapons.  It has also been stated that new weapons types need to be added in the future, quickly. So your design needs to ensure that this can happen without existing code needing to be updated.
 
-3. Keep it going, the more classes the better. For this release you need to add another five different weapons.
+3. The game must now support the changing of character classes at run-time. For this to be an acceptable release you should be able to create a new character and give it a weapon type, call fight to see the output for that class, and then change the weapon type to another weapon. Calling fight at this point will show output for the new character class.
 
-4. Reviews are in! People are complaining that your game is too violent and your publisher is demanding you add a pacifist class to the game. For this to be an acceptable release you should be able to create a character that when fight is called, output is returned showing that the character does not fight.
+4. The more classes the better. For this release you need to add another five different weapons.
+
+5. Reviews are in! People are complaining that your game is too violent and your publisher is demanding you add a pacifist class to the game. For this to be an acceptable release you should be able to create a character that when fight is called, output is returned showing that the character does not fight.
