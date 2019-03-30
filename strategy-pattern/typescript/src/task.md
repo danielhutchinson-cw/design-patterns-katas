@@ -1,8 +1,10 @@
 # The point of this Kata
-You should be able to write code that is extensible, as requirements change, additional actions should be quick and easy to implement. With as few changes to the codebase as possible. This reduces the risk of introducing defects, and reduces the overall cost of new features.
+You should be able to write code that is extensible, as requirements change, additional features should be quick and easy to implement. With as few changes to the codebase as possible. 
+
+This reduces the risk of introducing defects, and reduces the overall cost of implementing new features.
 
 # Arbitrary rules
-- You are not allowed to write an `if statement` anywhere in your code
+- You are not allowed to write an `if statement` anywhere in your code. If statements, when overused or used incorrectly can quickly become a problem.
 
 # Recommended Pattern
 - Strategy Pattern
@@ -19,7 +21,11 @@ Unfortunately; your publisher, Artistic Electronics, is a draconic overlord that
 
 1. The game must support a single character class that is able to fight. For this to be an acceptable release you should be able to create a new character, call fight on that character and see some output.
 
-2. The game must now support multiple character classes. For this to be an acceptable release you should be able to create a new character and give it a weapon type. The weapon type the character has should change which output is show when fight is called. The release should support three different weapons.  It has also been stated that new weapons types need to be added in the future, quickly. So your design needs to ensure that this can happen without existing code needing to be updated.
+2. The game must now support multiple character classes. For this to be an acceptable release you should be able to create a new character and give it a weapon type. The weapon type the character has should change which output is show when fight is called. The release should support three different weapons.  
+
+To prove this works, create three different characters, each with a different weapon, and call fight on each one.
+
+It has also been stated that new weapons types need to be added in the future, quickly. So your design needs to ensure that this can happen without existing code needing to be updated.
 
 3. The game must now support the changing of character classes at run-time. For this to be an acceptable release you should be able to create a new character and give it a weapon type, call fight to see the output for that class, and then change the weapon type to another weapon. Calling fight at this point will show output for the new character class.
 
