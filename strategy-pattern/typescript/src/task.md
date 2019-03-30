@@ -16,8 +16,8 @@ Unfortunately; your publisher, Artistic Electronics, is a draconic overlord that
 
 1. The game must support a single character class that is able to fight. For this to be an acceptable release you should be able to create a new character, call fight on that character and see some output.
 
-2. The game must now support multiple character classes. For this to be an acceptable release you should be able to create a new character and give it a weapon type. The weapon type the character has should change which output is show when fight is called. The release should support three different weapons.
+2. The game must now support multiple character classes. For this to be an acceptable release you should be able to create a new character and give it a weapon type. The weapon type the character has should change which output is show when fight is called. The release should support three different weapons.  It has also been stated that new weapons types need to be added in the future, quickly. So your design needs to ensure that this can happen without existing code needing to be updated.
 
-3. Keep it going, the more classes the better. For this release you need to add another five different weapons. At this point it may be worth looking at your design and ensuring it is as easy as possible to add new weapons in the future.
+3. Keep it going, the more classes the better. For this release you need to add another five different weapons.
 
 4. Reviews are in! People are complaining that your game is too violent and your publisher is demanding you add a pacifist class to the game. For this to be an acceptable release you should be able to create a character that when fight is called, output is returned showing that the character does not fight.
