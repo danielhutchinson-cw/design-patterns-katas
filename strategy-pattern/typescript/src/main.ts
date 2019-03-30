@@ -1,4 +1,3 @@
-import { Greeter } from "./greeter/greeter";
-
-const greeter = new Greeter();
-console.log(greeter.greet('Alice'));
+/*
+    Put the implementation of your code here. Then run yarn start, to see it working in the console
+*/
