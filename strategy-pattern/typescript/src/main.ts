@@ -1,3 +1,18 @@
-/*
-    Put the implementation of your code here. Then run yarn start, to see it working in the console
-*/
+class Character {
+    public weapon: Weapon;
+
+    public fight(): void {
+        console.log('Character is fighting');
+    }
+}
+
+class Weapon {
+    
+}
+
+const c = new Character();
+console.log('---------------- -------------- --------------');
+console.log('---------------- Starting Game! --------------');
+console.log('---------------- -------------- --------------');
+
+c.fight();
