@@ -1,34 +1,34 @@
-# The point of this Kata
-You should be able to write code that is extensible, as requirements change, additional features should be quick and easy to implement. With as few changes to the codebase as possible. 
+Hi and welcome to team Gilded Rose.
 
-This reduces the risk of introducing defects, and reduces the overall cost of implementing new features.
+As you know, we are a small inn with a prime location in a prominent city ran by a friendly innkeeper named Allison. Unfortunately, our goods are constantly degrading in quality as they approach their sell by date.
 
-# Arbitrary rules
-- You are not allowed to write an `if statement` anywhere in your code. If statements, when overused or used incorrectly can quickly become a problem.
+We have a system in place that updates our inventory for us. It was developed by a no-nonsense type named Leeroy, who has moved on to new adventures. Your task is to add the new feature to our system so that we can begin selling a new category of items.
 
-# Recommended Pattern
-- Strategy Pattern
+First an introduction to our system:
 
-# Project Brief
+- All items have a sell-in value which denotes the number of days we have to sell the item
 
-A games company you work for is developing a new RPG game, to be built in iterations starting with simple requirements and building up to increase in complexity. You have been tasked with implementing player classes within the game. 
+- All items have a quality value which denotes how valuable the item is
 
-During the design standup this morning the game designer has stated that a characters class is dependent upon what weapon the character is holding. When equipping new weapons the characters class can change dynamically at run-time.
+- At the end of each day our system lowers both values for every item
 
-Unfortunately; your publisher, Artistic Electronics, is a draconic overlord that demands each iteration be a full working release so that they can sell each update at full price. As such your system design should allow for changes to be made without having to change code that is already in place.
+Pretty simple, right? Well this is where it gets interesting:
 
-# Iterations
+- Once the sell by date has passed, quality degrades twice as fast
 
-1. The game must support a single character class that is able to fight. For this to be an acceptable release you should be able to create a new character, call fight on that character and see some output.
+- The quality of an item is never negative
 
-2. The game must now support multiple character classes. For this to be an acceptable release you should be able to create a new character and give it a weapon type. The weapon type the character has should change which output is show when fight is called. The release should support three different weapons.  
+- "Aged Brie" actually increases in quality the older it gets
 
-To prove this works, create three different characters, each with a different weapon, and call fight on each one.
+- The quality of an item is never more than 50
 
-It has also been stated that new weapons types need to be added in the future, quickly. So your design needs to ensure that this can happen without existing code needing to be updated.
+- "Sulfuras", being a legendary item, never has to be sold or decreases in quality
 
-3. The game must now support the changing of character classes at run-time. For this to be an acceptable release you should be able to create a new character and give it a weapon type, call fight to see the output for that class, and then change the weapon type to another weapon. Calling fight at this point will show output for the new character class.
+- "Backstage passes", like aged brie, increases in quality as its sell-in value approaches; quality increases by 2 when there are 10 days or less and by 3 when there are 5 days or less but quality drops to 0 after the concert
 
-4. The more classes the better. For this release you need to add another five different weapons.
+We have recently signed a supplier of conjured items. This requires an update to our system:
 
-5. Reviews are in! People are complaining that your game is too violent and your publisher is demanding you add a pacifist class to the game. For this to be an acceptable release you should be able to create a character that when fight is called, output is returned showing that the character does not fight.
+"Conjured" items degrade in quality twice as fast as normal items
+Feel free to make any changes to the update-quality method and add any new code as long as everything still works correctly. However, do not alter the item function as that belongs to the goblin in the corner who will insta-rage and one-shot you as he doesn't believe in shared code ownership.
+
+Just for clarification, an item can never have its quality increase above 50, however "Sulfuras" is a legendary item and as such its quality is 80 and it never alters.
